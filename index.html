@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kertara - Home</title>
+<style>
+    * { box-sizing: border-box; user-select: none; }
+    body { margin:0; font-family:Tahoma, Verdana, sans-serif; background:#c0c0c0; color:#000; min-height:100vh; display:flex; flex-direction:column; }
+    .navbar { display:flex; justify-content:space-between; align-items:center; padding:15px 5%; background:#dcdcdc; border-bottom:2px solid #808080; }
+    .logo { font-weight:bold; color:#008080; font-size:24px; cursor:pointer; }
+    .nav-links a { margin-left:20px; text-decoration:none; color:black; font-weight:bold; }
+    .container { max-width:1100px; margin:40px auto; padding:0 20px; flex:1; width: 100%; }
+    .card { background:#e6e6e6; border:2px solid #808080; border-top:2px solid #ffffff; border-left:2px solid #ffffff; padding:20px; margin-bottom: 20px; }
+    .team-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:20px; margin-top:20px; }
+    .footer { background:#dcdcdc; border-top:2px solid #808080; padding:40px 5%; display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:30px; margin-top:40px; }
+    .footer-col h4 { color:#008080; margin-bottom:15px; }
+    .footer-col a { display:block; color:black; text-decoration:none; margin-bottom:8px; }
+    .copyright { grid-column: 1 / -1; text-align:center; border-top:1px solid #808080; padding-top:20px; font-size:12px; color:#444; }
+    @media (max-width: 600px) { .navbar { flex-direction:column; gap:15px; } .nav-links a { margin:0 10px; } }
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo" onclick="window.location.href='./'">Kertara</div>
+        <div class="nav-links"><a href="./">Home</a><a href="products/">Products</a></div>
+    </div>
+    <div class="container">
+        <h1>Kertara</h1>
+        <p>Software focused on anonymity, privacy, and cyber security.</p>
+        <h2>Our Team</h2>
+        <div class="team-grid">
+            <div class="card"><b>Yonatan Kristian</b><br>Founder & Lead Developer</div>
+            <div class="card"><b>Joshafat Abdiel Budhianto</b><br>Designer & Idea Lead</div>
+        </div>
+        <h2>Newest Product</h2>
+        <div class="card">
+            <b>Kertara Messenger (0.1.0-alpha)</b><br><br>
+            <a href="kertara-messenger/" style="color:#008080; font-weight:bold;">View Product Details</a>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-col"><h4>About Kertara</h4><p>We believe in the fundamental right to private and anonymous communication.</p></div>
+        <div class="footer-col"><h4>Navigation</h4><a href="./">Home</a><a href="products/">Products</a></div>
+        <div class="footer-col"><h4>Contact</h4>
+            <p>Email: <a href="mailto:contact@kertara.org">contact@kertara.org</a></p>
+            <p>GitHub: <a href="https://github.com/kertara" target="_blank">github.com/kertara</a></p>
+        </div>
+        <div class="copyright">© 2026 Kertara Project. All rights reserved. Dedicated to providing robust anonymity solutions for global users.</div>
+    </footer>
+</body>
+</html>
