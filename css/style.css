@@ -1,0 +1,460 @@
+/* Kertara Technical Documentation Stylesheet */
+
+:root {
+    /* Default to Light Mode */
+    --bg-color: #ffffff;
+    --bg-alt: #f4f4f4;
+    --text-main: #222222;
+    --text-muted: #555555;
+    --border-color: #dddddd;
+    
+    --nav-bg: #111111;
+    --nav-text: #ffffff;
+    --nav-hover: #333333;
+    
+    --accent-color: #0056b3;
+    --accent-hover: #003d82;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --bg-alt: #222222;
+    --text-main: #eeeeee;
+    --text-muted: #aaaaaa;
+    --border-color: #444444;
+    
+    --nav-bg: #000000;
+    --nav-text: #ffffff;
+    --nav-hover: #222222;
+    
+    --accent-color: #66b3ff;
+    --accent-hover: #99ccff;
+}
+
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.8;
+    font-size: 16px;
+    transition: background-color 0.2s, color 0.2s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+
+p, ul, ol {
+    margin-bottom: 1.5rem;
+}
+
+/* UI Text Selection Policy */
+.site-header,
+.site-footer,
+.btn-donate,
+button,
+h1, h2, h3,
+.project-title,
+.breadcrumbs {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Header & Navigation */
+.site-header {
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--nav-text) !important;
+    text-decoration: none !important;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.25rem;
+}
+
+.nav-links a {
+    color: var(--nav-text);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: normal;
+}
+
+.nav-links a:hover {
+    background-color: var(--nav-hover);
+    text-decoration: none;
+}
+
+.btn-donate {
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: transparent;
+    border: none;
+    color: var(--nav-text);
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.theme-toggle:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-btn {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: var(--nav-text);
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Layout Grid */
+.page-wrapper {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 3rem;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.main-content {
+    min-width: 0;
+}
+
+.sidebar {
+    padding-top: 1rem;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 0.75rem;
+}
+
+.sidebar-menu a {
+    color: var(--text-main);
+}
+
+/* Projects Search & Details */
+.search-container {
+    margin-bottom: 2rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--bg-alt);
+    color: var(--text-main);
+    box-sizing: border-box;
+}
+
+.project-item {
+    display: block;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    background-color: var(--bg-color);
+    padding: 1rem 1.5rem;
+    color: var(--text-main);
+    transition: background-color 0.2s;
+}
+
+.project-item:hover {
+    background-color: var(--bg-alt);
+    text-decoration: none;
+}
+
+.project-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.project-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--accent-color);
+}
+
+.project-status {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.project-desc {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Code Blocks */
+pre {
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    overflow-x: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.9em;
+    border-radius: 4px;
+}
+
+code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    background-color: var(--bg-alt);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.team-card {
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.team-card-img {
+    width: 100%;
+    height: 200px;
+    background-color: var(--bg-alt);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 3rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.team-card-body {
+    padding: 1.5rem;
+}
+
+.team-card-body h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.25rem;
+}
+
+.team-role {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.team-links a {
+    margin-right: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.gallery-date {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90vh;
+    border: 2px solid #333;
+}
+
+/* Breadcrumbs & Back Button */
+.breadcrumbs {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.breadcrumbs a {
+    color: var(--text-muted);
+}
+
+.breadcrumbs a:hover {
+    color: var(--accent-color);
+}
+
+.btn-back {
+    background: transparent;
+    border: none;
+    color: var(--accent-color);
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0;
+    margin-right: 0.5rem;
+}
+
+.btn-back:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+    border-top: 1px solid var(--border-color);
+    background-color: var(--bg-alt);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.site-footer p {
+    margin: 0.25rem 0;
+    color: var(--text-muted);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-wrapper {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1rem;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: var(--nav-bg);
+        flex-direction: column;
+        padding: 1rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links a {
+        padding: 0.75rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+}

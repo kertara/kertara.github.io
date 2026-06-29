@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kertara Messenger - Kertara</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="../../index.html" class="brand">Kertara</a>
+            <button id="mobile-menu-btn" class="mobile-menu-btn">Menu</button>
+        </div>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about/">About</a></li>
+            <li><a href="../../projects/">Projects</a></li>
+            <li><a href="../../team/">Team</a></li>
+            <li><a href="../../gallery/">Gallery</a></li>
+            <li><a href="../../donate/" class="btn-donate">Donate</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
+    </header>
+
+    <div class="page-wrapper" style="grid-template-columns: 1fr;">
+        <main class="main-content">
+            <div class="breadcrumbs">
+                <button class="btn-back" onclick="window.history.back()">&larr; Back</button> | 
+                <a href="../../index.html">Home</a> &gt; <a href="../index.html">Projects</a> &gt; <span>Kertara Messenger</span>
+            </div>
+
+            <h1>Kertara Messenger <span style="font-size: 0.5em; color: var(--text-muted); font-weight: normal;">(v0.1.0-alpha)</span></h1>
+            
+            <p><strong>Description:</strong> A Python-based application using Tor for secure connectivity.</p>
+            <p><strong>Developers:</strong> Yonatan Kristian, Joshafat Abdiel Budhianto.</p>
+
+            <h2>Technical Overview</h2>
+            <p>
+                Kertara Messenger is designed to provide end-to-end encrypted messaging without exposing metadata to central servers. 
+                By routing all traffic through the Tor network, it ensures that your IP address and physical location remain hidden.
+            </p>
+            <p>
+                The backend is written entirely in Python, utilizing standard cryptographic libraries to establish secure socket connections. 
+                It operates on a peer-to-peer architecture, meaning there is no central database storing your conversation history.
+            </p>
+
+            <h2>Features</h2>
+            <ul>
+                <li>On-the-fly encryption using AES-256 and RSA-4096.</li>
+                <li>Traffic routed exclusively through Tor hidden services (.onion).</li>
+                <li>No central server dependency; true peer-to-peer connection.</li>
+                <li>Self-destructing messages (optional).</li>
+            </ul>
+
+            <h2>Changelog</h2>
+            <ul>
+                <li><strong>v0.1.0-alpha:</strong> Initial public release. Basic peer-to-peer connection established over Tor.</li>
+                <li><strong>v0.0.9:</strong> Internal testing phase. Fixed memory leaks in the socket handler.</li>
+            </ul>
+
+            <div style="margin-top: 3rem; padding: 2rem; background-color: var(--bg-alt); border: 1px solid var(--border-color); border-radius: 4px; text-align: center;">
+                <h3>Ready to Test?</h3>
+                <p>This software is in alpha. Do not use it for highly sensitive communications yet.</p>
+                <a href="#" class="btn-donate" style="display:inline-block; padding: 0.75rem 1.5rem; background-color: var(--nav-bg); color: #fff; border-radius: 4px; font-weight: bold; margin-top: 1rem;">Download Kertara Messenger</a>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>Email: <a href="mailto:contact@kertara.proton.me">contact@kertara.proton.me</a> | GitHub: <a href="https://github.com/kertara">github.com/kertara</a></p>
+        <p>&copy; 2026 Kertara Community. All rights reserved.</p>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>
