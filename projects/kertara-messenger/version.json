@@ -1,14 +1,14 @@
 {
   "meta": {
-    "version": "0.1.1-alpha",
-    "last_updated": "2026-06-30T10:00:00Z"
+    "version": "0.1.0-alpha",
+    "last_updated": "2026-06-19T00:00:00Z"
   },
   "compatibility": {
-    "min_required_version": "0.1.1-alpha"
+    "min_required_version": "0.1.0-alpha"
   },
   "update_policy": {
-    "force_update": false,
-    "update_url": "https://github.com/kopikering/secura/releases/latest"
+    "force_update": true,
+    "update_url": "https://github.com/kertara/kertara-messenger/releases"
   },
   "ui_localization": {
     "title": "Mandatory Security Update",
