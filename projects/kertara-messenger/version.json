@@ -1,14 +1,14 @@
 {
     "maintenance": {
-        "mode": false,
-        "message": "Kertara Messenger is currently undergoing scheduled maintenance. Please try again later."
+        "mode": true,
+        "message": "Kertara Messenger is offline for emergency security patching. We'll be back shortly!"
     },
     "compatibility": {
         "min_required_version": "0.1.0"
     },
     "ui_localization": {
-        "title": "Update Required",
-        "message": "A newer version of Kertara Messenger is required to continue. Would you like to open the download page?"
+        "title": "Maintenance",
+        "message": "Please update your client."
     },
     "update_policy": {
         "update_url": "https://github.com/kertara/kertara-messenger/releases"
