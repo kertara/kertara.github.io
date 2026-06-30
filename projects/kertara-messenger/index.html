@@ -20,67 +20,59 @@
                 <button class="btn-back" onclick="window.history.back()">&larr; Back</button> |
                 <a href="../../">Home</a> &gt; <a href="../">Projects</a> &gt; <span>Kertara Messenger</span>
             </div>
-
+    
             <h1>Kertara Messenger <span
                     style="font-size: 0.5em; color: var(--text-muted); font-weight: normal;">(v0.1.0-alpha)</span></h1>
-
-            <p><strong>Description:</strong> A messaging application that focuses on privacy by hiding your identity
-                using the Tor network.</p>
-            <p><strong>Developers:</strong> Yonatan Kristian, Joshafat Abdiel Budhianto.</p>
-
-            <h2>How Does It Work?</h2>
-            <p>
-                Think of Kertara Messenger like sending a letter through a secret courier. Instead of going through a
-                main post office that keeps a record of who sent what to whom, this app creates a "secret path" directly
-                between the sender and the receiver using the Tor network.
-            </p>
-
-            <h3>Key Features:</h3>
+    
+            <p><strong>Description:</strong> A privacy-focused communication platform that prioritizes user data security through end-to-end encryption and anonymous routing via the Tor network. This project is now <strong>Open Source</strong>, promoting transparency and community collaboration.</p>
+            <p><strong>Status:</strong> Alpha testing phase.</p>
+    
+            <h2>Key Features</h2>
             <ul>
-                <li><strong>Hidden Network:</strong> All messages pass through the Tor network, which scrambles your
-                    message's travel path so that your location or internet address (IP) cannot be easily tracked by
-                    outsiders.</li>
-                <li><strong>Double-Locked Messages:</strong> Every message you send is locked with a digital code. Only
-                    the intended recipient has the "key" to unlock and read it.</li>
-                <li><strong>Local Control:</strong> All your conversation history is stored directly on your own
-                    computer, not on a company server. You are the only one in control of your data.</li>
+                <li><strong>End-to-End Encryption:</strong> All messages are encrypted directly on your device; only you and the recipient can read them.</li>
+                <li><strong>Maximum Privacy:</strong> Integrated with the Tor network to keep your identity and physical location hidden from surveillance.</li>
+                <li><strong>Local Data Storage:</strong> Your contact list and security keys are stored locally on your device. Your privacy is our priority.</li>
+                <li><strong>Full Control:</strong> You retain complete control over your identity and contact list without any third-party interference.</li>
             </ul>
-
-            <h2 style="color: #d9534f;">Risks and Limitations (Important!)</h2>
-            <p>
-                Because this is still an early version (alpha), the app is currently in the experimental stage. Please
-                keep these points in mind:
-            </p>
-            <ul>
-                <li><strong>Not Fully Tested:</strong> The security technology we built is still in its early stages and
-                    has not been reviewed by outside security experts, so there may be undiscovered flaws.</li>
-                <li><strong>Traces on Your Computer:</strong> While we try our best to delete sensitive data, computer
-                    operating systems (like Windows) sometimes save small pieces of information in temporary memory. If
-                    someone else hacks your computer, they might be able to find those pieces.</li>
-                <li><strong>Pattern Awareness:</strong> Even though the content of your message is safe, the time you
-                    send messages and how often you communicate could theoretically be seen if someone watches your
-                    internet connection for a very long time.</li>
-                <li><strong>Not for High-Risk Communication:</strong> Please do not use this app for highly sensitive or
-                    high-risk matters at this time.</li>
-            </ul>
-
-            <h2>Changelog</h2>
-            <ul>
-                <li><strong>v0.1.0-alpha:</strong> Initial public release. Focuses on stable Tor connectivity and basic
-                    message protection.</li>
-            </ul>
-
-            <div
-                style="margin-top: 3rem; padding: 2rem; background-color: var(--bg-alt); border: 1px solid #d9534f; border-radius: 4px; text-align: center;">
+    
+            <h2>Installation & Development</h2>
+            <h3>For Users</h3>
+            <ol>
+                <li>Download the latest release from the <a href="https://github.com/kertara/kertara-messenger/releases">Releases page</a>.</li>
+                <li>Extract the files to a folder on your computer.</li>
+                <li><strong>Important:</strong> Download the required Tor Expert Bundle based on your system architecture and extract it into the project folder:
+                    <ul>
+                        <li><a href="https://archive.torproject.org/tor-package-archive/torbrowser/15.0.17/tor-expert-bundle-windows-x86_64-15.0.17.tar.gz">Tor Expert Bundle (x86_64)</a></li>
+                        <li><a href="https://archive.torproject.org/tor-package-archive/torbrowser/15.0.17/tor-expert-bundle-windows-i686-15.0.17.tar.gz">Tor Expert Bundle (i686)</a></li>
+                    </ul>
+                </li>
+                <li>Run <code>kertara-messenger-v0.1.0-alpha.exe</code>.</li>
+                <li>Wait for the Tor network initialization to reach 100%.</li>
+            </ol>
+    
+            <h3>For Developers (Contributors)</h3>
+            <p>To run the application from the source code:</p>
+            <ol>
+                <li>Clone this repository: <code>git clone https://github.com/kertara/kertara-messenger.git</code></li>
+                <li>Download the appropriate Tor Expert Bundle from the links provided above and extract it into the cloned directory.</li>
+                <li>Install the required dependencies: <code>pip install -r requirements.txt</code></li>
+                <li>Run the application: <code>python main.py</code></li>
+            </ol>
+    
+            <h2>Project Status (Alpha)</h2>
+            <p>This application is currently in the <strong>Alpha</strong> testing phase. Bugs and technical issues may occur. We highly appreciate your feedback and encourage you to report any bugs or suggest features via the <a href="https://github.com/kertara/kertara-messenger/issues">GitHub Issue Tracker</a>.</p>
+    
+            <h2>License</h2>
+            <p>This project is open-source and licensed under the <strong>MIT License</strong>. You are permitted to use, modify, and distribute this code in accordance with the terms specified in the <a href="https://github.com/kertara/kertara-messenger/blob/main/LICENSE">LICENSE</a> file.</p>
+    
+            <div style="margin-top: 3rem; padding: 2rem; background-color: var(--bg-alt); border: 1px solid #d9534f; border-radius: 4px; text-align: center;">
                 <h3>Ready to Test?</h3>
                 <p><strong>Note:</strong> Use this software for educational and experimental purposes only.</p>
                 <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                    <a href="#"
-                        style="display:inline-block; padding: 0.75rem 1.5rem; background-color: #d9534f; color: #fff; border-radius: 4px; font-weight: bold; margin-top: 1rem; text-decoration: none;">Download
-                        (Alpha)</a>
+                    <a href="https://github.com/kertara/kertara-messenger/releases"
+                        style="display:inline-block; padding: 0.75rem 1.5rem; background-color: #d9534f; color: #fff; border-radius: 4px; font-weight: bold; margin-top: 1rem; text-decoration: none;">Download (Alpha)</a>
                     <a href="https://github.com/kertara/kertara-messenger"
-                        style="display:inline-block; padding: 0.75rem 1.5rem; background-color: transparent; color: var(--text-main); border: 2px solid var(--border-color); border-radius: 4px; font-weight: bold; margin-top: 1rem; text-decoration: none;">View
-                        Source on GitHub</a>
+                        style="display:inline-block; padding: 0.75rem 1.5rem; background-color: transparent; color: var(--text-main); border: 2px solid var(--border-color); border-radius: 4px; font-weight: bold; margin-top: 1rem; text-decoration: none;">View Source on GitHub</a>
                 </div>
             </div>
         </main>
